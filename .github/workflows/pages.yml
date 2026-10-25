@@ -39,7 +39,7 @@ jobs:
       - name: Assemble the site
         run: |
           mkdir -p _site
-          cp index.html app.js manifest.json sw.js icon-192.png icon-512.png apple-touch-icon.png data.json .nojekyll _site/
+          cp index.html app.js manifest.json sw.js icon-192.png icon-512.png icon-maskable-512.png apple-touch-icon.png data.json .nojekyll _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

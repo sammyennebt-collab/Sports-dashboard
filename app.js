@@ -323,7 +323,9 @@ function init() {
   setInterval(tick, 1000);
   load();
   setInterval(load, 300000);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Sports-dashboard/sw.js', {scope: '/Sports-dashboard/'}).catch(() => {});
+  }
 }
 
 if (typeof document !== 'undefined') init();

@@ -29,7 +29,7 @@ GitHub Actions (`.github/workflows/pages.yml`) runs the updater about every 30 m
 
 ## Install on a phone
 
-The site is a standalone web app: `manifest.json`, 192 and 512 icons, and `apple-touch-icon.png`. On an iPhone, open the site in Safari, tap Share, then Add to Home Screen. It opens without the browser chrome. Android can install it from the browser menu.
+The site is a standalone web app: `manifest.json` (id, start URL, and scope `/Sports-dashboard/`), 192 and 512 icons, a maskable 512 icon, `apple-touch-icon.png`, and a service worker with a fetch handler. On an iPhone, open the site in Safari, tap Share, then Add to Home Screen. It opens without the browser chrome. Android can install it from the browser menu.
 
 ## Run locally
 
