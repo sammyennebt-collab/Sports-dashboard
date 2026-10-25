@@ -1,0 +1,18 @@
+{
+  "source": "Static Rolex SailGP Championship weekends. ESPN has no SailGP scoreboard. Kickoff times are not published as a free feed, so each event uses an early-afternoon local start and the dates below. 2026 weekends match SailGP's published season calendar (Dubai 21-22 Nov, Abu Dhabi 28-29 Nov). 2027 dates follow the 20 May 2026 schedule release and can move.",
+  "events": [
+    {"name": "Emirates Dubai Sail Grand Prix", "start": "2026-11-21T14:00:00+04:00", "end": "2026-11-22T19:00:00+04:00", "venue": "Dubai"},
+    {"name": "Mubadala Abu Dhabi Sail Grand Prix — Season Grand Final", "start": "2026-11-28T14:00:00+04:00", "end": "2026-11-29T19:00:00+04:00", "venue": "Abu Dhabi"},
+    {"name": "Hong Kong Sail Grand Prix", "start": "2027-01-23T14:00:00+08:00", "end": "2027-01-24T19:00:00+08:00", "venue": "Hong Kong"},
+    {"name": "San Francisco Sail Grand Prix", "start": "2027-04-03T14:00:00-07:00", "end": "2027-04-04T19:00:00-07:00", "venue": "San Francisco"},
+    {"name": "Apex Group Bermuda Sail Grand Prix", "start": "2027-05-01T14:00:00-03:00", "end": "2027-05-02T19:00:00-03:00", "venue": "Bermuda"},
+    {"name": "Canada Sail Grand Prix | Halifax", "start": "2027-05-15T14:00:00-03:00", "end": "2027-05-16T19:00:00-03:00", "venue": "Halifax"},
+    {"name": "New York Sail Grand Prix", "start": "2027-06-05T14:00:00-04:00", "end": "2027-06-06T19:00:00-04:00", "venue": "New York"},
+    {"name": "Emirates Great Britain Sail Grand Prix | Portsmouth", "start": "2027-07-24T14:00:00+01:00", "end": "2027-07-25T19:00:00+01:00", "venue": "Portsmouth"},
+    {"name": "Germany Sail Grand Prix | Sassnitz", "start": "2027-08-14T14:00:00+02:00", "end": "2027-08-15T19:00:00+02:00", "venue": "Sassnitz"},
+    {"name": "Spain Sail Grand Prix | Valencia", "start": "2027-09-04T14:00:00+02:00", "end": "2027-09-05T19:00:00+02:00", "venue": "Valencia"},
+    {"name": "Italy Sail Grand Prix", "start": "2027-09-11T14:00:00+02:00", "end": "2027-09-12T19:00:00+02:00", "venue": "Italy"},
+    {"name": "Enel Rio Sail Grand Prix", "start": "2027-10-09T14:00:00-03:00", "end": "2027-10-10T19:00:00-03:00", "venue": "Rio de Janeiro"},
+    {"name": "Emirates Dubai Sail Grand Prix", "start": "2027-11-20T14:00:00+04:00", "end": "2027-11-21T19:00:00+04:00", "venue": "Dubai"}
+  ]
+}

@@ -1,0 +1,57 @@
+name: Update scores and deploy
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Unit tests
+        run: node tests.cjs
+      - name: Updater self-test
+        run: python3 scripts/update.py --self-test
+      - name: Fetch scoreboards
+        run: python3 scripts/update.py
+      - name: Check the snapshot lists every feed
+        run: node tests.cjs --snapshot
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp index.html app.js manifest.json sw.js icon-192.png icon-512.png apple-touch-icon.png data.json .nojekyll _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
